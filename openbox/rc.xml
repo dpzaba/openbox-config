@@ -219,12 +219,12 @@ and back in -->
       </action>
     </keybind>
     <!--> GUI for xrandr: arandr <-->
-    <keybind key="F6">
+    <keybind key="W-F6">
       <action name="Execute">
         <command>xrandr --output VGA-0 --mode 1920x1080 --pos 0x0 --rotate normal --output LVDS --off</command>
       </action>
     </keybind>
-    <keybind key="F7">
+    <keybind key="W-F7">
       <action name="Execute">
         <command>xrandr --output VGA-0 --off --output LVDS --mode 1280x800 --pos 0x0 --rotate normal</command>
       </action>
