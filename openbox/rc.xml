@@ -235,7 +235,7 @@ and back in -->
     <x>-0</x>
     <y>-0</y>
     <width>1/2</width>
-    <height>98%</height>
+    <height>1/1</height>
   </action>
 </keybind>
 <keybind key="W-l">
@@ -243,7 +243,7 @@ and back in -->
     <x>0</x>
     <y>-0</y>
     <width>1/2</width>
-    <height>98%</height>
+    <height>1/1</height>
   </action>
 </keybind>
 <keybind key="W-c">
@@ -252,6 +252,14 @@ and back in -->
     <y>center</y>
     <width>1/2</width>
     <height>70%</height>
+  </action>
+</keybind>
+<keybind key="W-f">
+  <action name="MoveResizeTo">
+    <x>center</x>
+    <y>center</y>
+    <width>1/1</width>
+    <height>1/1</height>
   </action>
 </keybind>
 
