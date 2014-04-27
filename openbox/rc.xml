@@ -230,40 +230,41 @@ and back in -->
       </action>
     </keybind>
 
-<keybind key="W-r">
-  <action name="MoveResizeTo">
-    <x>-0</x>
-    <y>-0</y>
-    <width>1/2</width>
-    <height>1/1</height>
-  </action>
-</keybind>
-<keybind key="W-l">
-  <action name="MoveResizeTo">
-    <x>0</x>
-    <y>-0</y>
-    <width>1/2</width>
-    <height>1/1</height>
-  </action>
-</keybind>
-<keybind key="W-c">
-  <action name="MoveResizeTo">
-    <x>center</x>
-    <y>center</y>
-    <width>1/2</width>
-    <height>70%</height>
-  </action>
-</keybind>
-<keybind key="W-f">
-  <action name="MoveResizeTo">
-    <x>center</x>
-    <y>center</y>
-    <width>1/1</width>
-    <height>1/1</height>
-  </action>
-</keybind>
+    <keybind key="W-r">
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>-0</y>
+        <width>1/2</width>
+        <height>1/1</height>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>1/2</width>
+        <height>1/1</height>
+      </action>
+    </keybind>
+    <keybind key="W-c">
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>1/2</width>
+        <height>70%</height>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="MoveResizeTo">
+        <x>center</x>
+        <y>center</y>
+        <width>1/1</width>
+        <height>1/1</height>
+      </action>
+    </keybind>
 
     <!-- David-->
+
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
