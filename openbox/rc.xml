@@ -55,10 +55,10 @@ Copy the file to $HOME/.config/openbox/ instead. -->
 	D: omnipresent (on all desktops).
     -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>no</animateIconify>
+    <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
-      <name>sans</name>
-      <size>8</size>
+      <name>Ubuntu</name>
+      <size>9</size>
       <!-- font size in points -->
       <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -66,8 +66,8 @@ Copy the file to $HOME/.config/openbox/ instead. -->
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveWindow">
-      <name>sans</name>
-      <size>8</size>
+      <name>Ubuntu</name>
+      <size>9</size>
       <!-- font size in points -->
       <weight>bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -75,8 +75,8 @@ Copy the file to $HOME/.config/openbox/ instead. -->
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>sans</name>
-      <size>9</size>
+      <name>Ubuntu</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -84,8 +84,8 @@ Copy the file to $HOME/.config/openbox/ instead. -->
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>sans</name>
-      <size>9</size>
+      <name>Ubuntu</name>
+      <size>10</size>
       <!-- font size in points -->
       <weight>normal</weight>
       <!-- 'bold' or 'normal' -->
@@ -94,7 +94,7 @@ Copy the file to $HOME/.config/openbox/ instead. -->
     </font>
     <font place="ActiveOnScreenDisplay">
       <name>Ubuntu</name>
-      <size>9</size>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -103,7 +103,7 @@ Copy the file to $HOME/.config/openbox/ instead. -->
     </font>
     <font place="InactiveOnScreenDisplay">
       <name>Ubuntu</name>
-      <size>9</size>
+      <size>10</size>
       <!-- font size in points -->
       <weight>Bold</weight>
       <!-- 'bold' or 'normal' -->
@@ -112,12 +112,9 @@ Copy the file to $HOME/.config/openbox/ instead. -->
     </font>
   </theme>
   <desktops>
-    <!-- this stuff is only used at startup, pagers allow you to change them
-	 during a session
-
-these are default values to use when other ones are not already set
-by other applications, or saved in your session
-
+    <!-- this stuff is only used at startup, pagers allow you to change them 
+during a session these are default values to use when other ones are not 
+already set by other applications, or saved in your session
 use obconf if you want to change these without having to log out
 and back in -->
     <number>2</number>
@@ -177,7 +174,34 @@ and back in -->
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
+
     <!-- David-->
+
+    <!-- Multimedia keybind-->
+    <keybind key="XF86WWW">
+      <action name="Execute">
+          <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
+
+    <keybind key="XF86Calculator">
+      <action name="Execute">
+          <command>galculator</command>
+      </action>
+    </keybind>
+
+    <keybind key="XF86MyComputer">
+      <action name="Execute">
+          <command>pcmanfm</command>
+      </action>
+    </keybind>
+
+    <keybind key="XF86Terminal">
+      <action name="Execute">
+          <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
+
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
         <command>amixer -D pulse set Master 5%+ unmute</command>
@@ -190,17 +214,14 @@ and back in -->
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>amixer set Master toggle</command>
+        <command>amixer -D pulse set Master toggle</command>
       </action>
     </keybind>
+
+    <!-- Music keybind-->
     <keybind key="C-A-l">
       <action name="Execute">
         <command>gnome-screensaver-command -l</command>
-      </action>
-    </keybind>
-    <keybind key="F4">
-      <action name="Execute">
-        <command>rhythmbox</command>
       </action>
     </keybind>
     <keybind key="W-Right">
@@ -218,7 +239,9 @@ and back in -->
         <command>rhythmbox-client --play-pause</command>
       </action>
     </keybind>
-    <!--> GUI for xrandr: arandr <-->
+
+    <!-- Manage multiple monitors -->
+    <!-- GUI for xrandr: arandr -->
     <keybind key="W-F6">
       <action name="Execute">
         <command>xrandr --output VGA-0 --mode 1920x1080 --pos 0x0 --rotate normal --output LVDS --off</command>
@@ -230,6 +253,7 @@ and back in -->
       </action>
     </keybind>
 
+    <!-- Windows resizer keybind -->
     <keybind key="W-r">
       <action name="MoveResizeTo">
         <x>-0</x>
@@ -417,7 +441,7 @@ and back in -->
     </keybind>
   </keyboard>
   <mouse>
-    <dragThreshold>1</dragThreshold>
+    <dragThreshold>8</dragThreshold>
     <!-- number of pixels the mouse must move before a drag begins -->
     <doubleClickTime>200</doubleClickTime>
     <!-- in milliseconds (1000 = 1 second) -->
@@ -756,7 +780,7 @@ and back in -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
     <!-- system menu files on Debian systems -->
     <file>/var/lib/openbox/debian-menu.xml</file>
-    <file>menu.xml</file>
+    <file>$HOME/.config/openbox/menu.xml</file>
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the
        menu is hidden again -->
@@ -764,8 +788,7 @@ and back in -->
     <!-- center submenus vertically about the parent entry -->
     <submenuShowDelay>100</submenuShowDelay>
     <!-- time to delay before showing a submenu after hovering over the parent
-       entry.
-       if this is a negative value, then the delay is infinite and the
+       entry. If this is a negative value, then the delay is infinite and the
        submenu will not be shown until it is clicked on -->
     <submenuHideDelay>400</submenuHideDelay>
     <!-- time to delay before hiding a submenu when selecting another
