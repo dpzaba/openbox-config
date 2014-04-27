@@ -209,7 +209,7 @@ Copy the file to $HOME/.config/openbox/ instead. -->
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer -D pulse set Master 5%- unmute</command>
+        <command>amixer -D pulse set Master 5%- </command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
