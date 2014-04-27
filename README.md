@@ -32,3 +32,8 @@ sh install.sh
 ```
 
 Warning: this will overwrite your previous configuration.
+
+
+# Screenshot
+
+![Openbox screenshot](https://raw.githubusercontent.com/dpzaba/openbox-config/master/Openbox-Screenshot.png)
