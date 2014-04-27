@@ -113,10 +113,10 @@ Copy the file to $HOME/.config/openbox/ instead. -->
   </theme>
   <desktops>
     <!-- this stuff is only used at startup, pagers allow you to change them 
-during a session these are default values to use when other ones are not 
-already set by other applications, or saved in your session
-use obconf if you want to change these without having to log out
-and back in -->
+         during a session these are default values to use when other ones are not 
+         already set by other applications, or saved in your session
+         use obconf if you want to change these without having to log out
+         and back in -->
     <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
@@ -178,29 +178,29 @@ and back in -->
     <!-- David-->
 
     <!-- Multimedia keybind-->
-    <keybind key="XF86WWW">
-      <action name="Execute">
-          <command>x-terminal-emulator</command>
-      </action>
-    </keybind>
+    <keybind key="XF86WWW">
+      <action name="Execute">
+        <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
 
-    <keybind key="XF86Calculator">
-      <action name="Execute">
-          <command>galculator</command>
-      </action>
-    </keybind>
+    <keybind key="XF86Calculator">
+      <action name="Execute">
+        <command>galculator</command>
+      </action>
+    </keybind>
 
-    <keybind key="XF86MyComputer">
-      <action name="Execute">
-          <command>pcmanfm</command>
-      </action>
-    </keybind>
+    <keybind key="XF86MyComputer">
+      <action name="Execute">
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
 
-    <keybind key="XF86Terminal">
-      <action name="Execute">
-          <command>x-terminal-emulator</command>
-      </action>
-    </keybind>
+    <keybind key="XF86Terminal">
+      <action name="Execute">
+        <command>x-terminal-emulator</command>
+      </action>
+    </keybind>
 
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
@@ -447,11 +447,11 @@ and back in -->
     <!-- in milliseconds (1000 = 1 second) -->
     <screenEdgeWarpTime>0</screenEdgeWarpTime>
     <!-- Time before changing desktops when the pointer touches the edge of the
-       screen while moving a window, in milliseconds (1000 = 1 second).
-       Set this to 0 to disable warping -->
+         screen while moving a window, in milliseconds (1000 = 1 second).
+         Set this to 0 to disable warping -->
     <screenEdgeWarpMouse>false</screenEdgeWarpMouse>
     <!-- Set this to TRUE to move the mouse pointer across the desktop when
-       switching due to hitting the edge of the screen -->
+         switching due to hitting the edge of the screen -->
     <context name="Frame">
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
@@ -776,25 +776,25 @@ and back in -->
   </mouse>
   <menu>
     <!-- You can specify more than one menu file in here and they are all loaded,
-       just don't make menu ids clash or, well, it'll be kind of pointless -->
+         just don't make menu ids clash or, well, it'll be kind of pointless -->
     <!-- default menu file (or custom one in $HOME/.config/openbox/) -->
     <!-- system menu files on Debian systems -->
     <file>/var/lib/openbox/debian-menu.xml</file>
-    <file>$HOME/.config/openbox/menu.xml</file>
+    <file>menu.xml</file>
     <hideDelay>200</hideDelay>
     <!-- if a press-release lasts longer than this setting (in milliseconds), the
-       menu is hidden again -->
+         menu is hidden again -->
     <middle>no</middle>
     <!-- center submenus vertically about the parent entry -->
     <submenuShowDelay>100</submenuShowDelay>
     <!-- time to delay before showing a submenu after hovering over the parent
-       entry. If this is a negative value, then the delay is infinite and the
-       submenu will not be shown until it is clicked on -->
+         entry. If this is a negative value, then the delay is infinite and the
+         submenu will not be shown until it is clicked on -->
     <submenuHideDelay>400</submenuHideDelay>
     <!-- time to delay before hiding a submenu when selecting another
-       entry in parent menu
-       if this is a negative value, then the delay is infinite and the
-       submenu will not be hidden until a different submenu is opened -->
+         entry in parent menu
+         if this is a negative value, then the delay is infinite and the
+         submenu will not be hidden until a different submenu is opened -->
     <applicationIcons>yes</applicationIcons>
     <!-- controls if icons appear in the client-list-(combined-)menu -->
     <manageDesktops>yes</manageDesktops>
@@ -802,10 +802,10 @@ and back in -->
   </menu>
   <applications>
     <!--
-      # this is an example with comments through out. use these to make your
-      # own rules, but without the comments of course.
-      # you may use one or more of the name/class/role/title/type rules to specify
-      # windows to match
+        # this is an example with comments through out. use these to make your
+        # own rules, but without the comments of course.
+        # you may use one or more of the name/class/role/title/type rules to specify
+        # windows to match
 
 <application name="the window's _OB_APP_NAME property (see obxprop)"
 class="the window's _OB_APP_CLASS property (see obxprop)"
@@ -881,6 +881,6 @@ type="the window's _OB_APP_TYPE property (see obxprob)..
 </application>
 
 # end of the example
-  -->
+    -->
   </applications>
 </openbox_config>
